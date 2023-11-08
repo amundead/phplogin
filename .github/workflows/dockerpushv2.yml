@@ -24,4 +24,4 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: amundead/phplogin:$(date +%s)
+          tags: amundead/phplogin:3.0
