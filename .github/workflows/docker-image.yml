@@ -32,9 +32,9 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          #platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            amundead/phplogin:6.0
-            ghcr.io/amundead/phplogin:6.0
+            amundead/phplogin:7.0
+            ghcr.io/amundead/phplogin:7.0
               
