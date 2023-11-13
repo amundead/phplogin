@@ -1,4 +1,4 @@
-#name: ci
+name: ci
 
 on:
   push:
@@ -25,7 +25,9 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
-          password: ${{ secrets.TOKEN_GITHUB }}
+          #username: ${{ secrets.USERNAME_GITHUB }}
+          #password: ${{ secrets.PASSWORD_GITHUB }}
+          password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
