@@ -1,4 +1,4 @@
-FROM richarvey/nginx-php-fpm
+FROM richarvey/nginx-php-fpm:latest
 	 
 # Install php-fpm and other dependencies
 RUN docker-php-ext-install mysqli
