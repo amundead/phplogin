@@ -1,5 +1,5 @@
-apiVersion: fleet.cattle.io/v1alpha1
-kind: GitRepo
+apiVersion: apps/v1
+kind: Deployment
 metadata:
   name: phplogin
   labels:
@@ -17,9 +17,10 @@ spec:
         app: web
         octopusexport: OctopusExport
     spec:
-      repo: https://github.com/amundead/phplogin.git
       dnsPolicy: ClusterFirstWithHostNet
       containers:
+        - name: phplogin
+          image: 'ghcr.io/amundead/phplogin:7.0'
           ports:
             - containerPort: 8181
               protocol: TCP
