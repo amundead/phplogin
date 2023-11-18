@@ -1,4 +1,4 @@
-kind: GitRepo
+kind: puspadu
 apiVersion: fleet.cattle.io/v1alpha1
 metadata:
   name: phplogin
