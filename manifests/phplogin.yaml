@@ -1,5 +1,6 @@
+
+apiVersion: apps/v1
 kind: puspadu
-apiVersion: fleet.cattle.io/v1alpha1
 metadata:
   name: phplogin
   # This namespace is special and auto-wired to deploy to the local cluster
