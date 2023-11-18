@@ -1,6 +1,12 @@
-kind: GitRepo
-apiVersion: fleet.cattle.io/v1alpha1
+apiVersion: apps/v1
+kind: Deployment
 metadata:
   name: phplogin
 spec:
   repo: https://github.com/amundead/phplogin.git
+  containers:
+        - name: phplogin
+          #image: 'ghcr.io/amundead/phplogin:7.0'
+          ports:
+            - containerPort: 8181
+              protocol: TCP
