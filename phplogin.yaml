@@ -17,13 +17,10 @@ spec:
         app: web
         octopusexport: OctopusExport
     spec:
-      volumes:
-        - name: mydata2
-          persistentVolumeClaim:
-            claimName: mydata2
+      dnsPolicy: ClusterFirstWithHostNet
       containers:
         - name: phplogin
-          image: 'phplogin:7.0'
+          image: 'ghcr.io/amundead/phplogin:7.0'
           ports:
             - containerPort: 8181
               protocol: TCP
