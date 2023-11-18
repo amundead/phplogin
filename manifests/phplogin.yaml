@@ -1,5 +1,5 @@
-apiVersion: fleet.cattle.io/v1alpha1
 kind: GitRepo
+apiVersion: fleet.cattle.io/v1alpha1
 metadata:
   name: phplogin
   # This namespace is special and auto-wired to deploy to the local cluster
