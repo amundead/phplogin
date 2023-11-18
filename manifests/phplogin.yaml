@@ -1,9 +1,0 @@
-
-apiVersion: apps/v1
-kind: puspadu
-metadata:
-  name: phplogin
-  # This namespace is special and auto-wired to deploy to the local cluster
-  namespace: phplogin
-  # Everything from this repo will be run in this cluster. You trust me right?
-  repo: "https://github.com/amundead/phplogin.git"
