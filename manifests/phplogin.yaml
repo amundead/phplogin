@@ -3,6 +3,6 @@ kind: GitRepo
 metadata:
   name: phplogin
   # This namespace is special and auto-wired to deploy to the local cluster
-  namespace: fleet-default
+  namespace: phplogin
   # Everything from this repo will be run in this cluster. You trust me right?
   repo: "https://github.com/amundead/phplogin.git"
