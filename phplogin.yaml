@@ -1,9 +1,7 @@
-apiVersion: apps/v1
 kind: GitRepo
+apiVersion: fleet.cattle.io/v1alpha1
 metadata:
-  name: phplogin
-  labels:
-    app: web
+  name: helm
 spec:
   selector:
     matchLabels:
