@@ -1,4 +1,4 @@
-apiVersion: fleet.cattle.io/v1alpha1
+apiVersion: apps/v1
 kind: GitRepo
 metadata:
   name: phplogin
