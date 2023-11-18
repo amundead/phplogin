@@ -18,7 +18,12 @@ spec:
         octopusexport: OctopusExport
     spec:
       dnsPolicy: ClusterFirstWithHostNet
-      repo: https://github.com/amundead/phplogin.git
+      containers:
+        - name: phplogin
+          image: 'ghcr.io/amundead/phplogin:7.0'
+          ports:
+            - containerPort: 8181
+              protocol: TCP
       affinity:
         podAntiAffinity:
           preferredDuringSchedulingIgnoredDuringExecution:
