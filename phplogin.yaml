@@ -1,6 +1,6 @@
 kind: GitRepo
 apiVersion: fleet.cattle.io/v1alpha1
 metadata:
-  name: helm
+  name: phplogin
 spec:
   repo: https://github.com/amundead/phplogin.git
