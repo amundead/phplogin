@@ -2,11 +2,38 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: phplogin
+  labels:
+    app: web
 spec:
-  repo: https://github.com/amundead/phplogin.git
-  containers:
+  selector:
+    matchLabels:
+      octopusexport: OctopusExport
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: web
+        octopusexport: OctopusExport
+    spec:
+      dnsPolicy: ClusterFirstWithHostNet
+      repo: https://github.com/amundead/phplogin.git
+      containers:
         - name: phplogin
           #image: 'ghcr.io/amundead/phplogin:7.0'
           ports:
             - containerPort: 8181
               protocol: TCP
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - weight: 100
+              podAffinityTerm:
+                labelSelector:
+                  matchExpressions:
+                    - key: app
+                      operator: In
+                      values:
+                        - web
+                topologyKey: kubernetes.io/hostname
