@@ -2,10 +2,10 @@
 /* Database credentials. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
 
-$hostname = parse_url(getenv('MYSQL_HOST'));
-$user = parse_url(getenv('MYSQL_USER'));
-$password = parse_url(getenv('MYSQL_PASSWORD'));
-$database = parse_url(getenv('MYSQL_DATABASE'));
+$hostname = (getenv('MYSQL_HOST'));
+$user = (getenv('MYSQL_USER'));
+$password = (getenv('MYSQL_PASSWORD'));
+$database = (getenv('MYSQL_DATABASE'));
 
 
 /* Attempt to connect to MySQL database */
