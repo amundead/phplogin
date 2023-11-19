@@ -3,7 +3,7 @@
 server with default setting (user 'root' with no password) */
 
 $hostname = (getenv('MYSQL_HOST'));
-$user = (getenv('MYSQL_USER'));
+$user = (getenv('MYSQL_USERNAME'));
 $password = (getenv('MYSQL_ROOT_PASSWORD'));
 $database = (getenv('MYSQL_DATABASE'));
 

@@ -6,6 +6,6 @@ RUN docker-php-ext-install mysqli
 # ENV
 
 ENV MYSQL_HOST=phplogin-db-1
-ENV MYSQL_USER=root
+ENV MYSQL_USERNAME=root
 ENV MYSQL_PASSWORD=root_password
 ENV MYSQL_DATABASE=demo
