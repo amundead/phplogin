@@ -8,6 +8,8 @@ services:
     networks:
       my-net:
         ipv4_address: 172.19.0.5
+    ports:
+     - '8181:80'
 
     volumes:
      - ./app:/var/www/html
@@ -38,4 +40,7 @@ networks:
   my-net:
     external: true
     #driver: bridge
+volumes:
+  mydata:
+    external: true
 
