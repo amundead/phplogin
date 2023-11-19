@@ -1,29 +1,39 @@
 version: '3.1'
 
 services:
-  nginx:
-    image: nginx:latest
-    ports:
-      - '8181:80'
-    networks:
-      my-net:
-        ipv4_address: 172.19.0.5
-
-    volumes:
-      - ./app:/var/www/html
-      - ./default.conf:/etc/nginx/conf.d/default.conf
-
   php:
     build:
       context: .
       dockerfile: ./Dockerfile
     networks:
       my-net:
-        ipv4_address: 172.19.0.6
+        ipv4_address: 172.19.0.5
 
     volumes:
      - ./app:/var/www/html
-  
+     - ./default.conf:/etc/nginx/conf.d/default.conf
+
+  db:
+    image: mysql:8.1.0
+    networks:
+      my-net:
+        ipv4_address: 172.19.0.3
+    ports:
+      - '3306:3306'
+    volumes:
+      - mydata:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+
+  adminer_container:
+    image: adminer:4.8.1
+    networks:
+      my-net:
+        ipv4_address: 172.19.0.4
+    environment:
+      ADMINER_DEFAULT_SERVER: db
+    ports:
+      - 8080:8080   
 networks:
   my-net:
     external: true
