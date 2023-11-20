@@ -19,18 +19,9 @@ spec:
     spec:
       hostNetwork: true
       volumes:
-        - _type: persistentVolumeClaim
+        - name: mydata
           persistentVolumeClaim:
-            claimName: mydata
-          name: phplogindisk
-          __newPvc:
-            type: persistentvolumeclaim
-            metadata:
-              namespace: phplogin
-      #volumes:
-        #- name: mydata
-          #persistentVolumeClaim:
-            #claimName: phplogindisk
+            claimName: phplogindisk
       containers:
         - name: phplogin
           image: 'ghcr.io/amundead/phplogin:8.0'
@@ -52,7 +43,7 @@ spec:
             - name: MYSQL_HOST
               value: 'localhost:3360'
           volumeMounts:
-            - claimName: mydata
+            - name: mydata
               mountPath: /var/www/html
               subPath: app
       affinity:
