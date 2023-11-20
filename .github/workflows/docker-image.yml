@@ -1,4 +1,4 @@
-name: ci
+name: update new phplogin:8.0
 
 on:
   push:
@@ -35,6 +35,6 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            amundead/phplogin:7.0
-            ghcr.io/amundead/phplogin:7.0
+            amundead/phplogin:8.0
+            ghcr.io/amundead/phplogin:8.0
               
