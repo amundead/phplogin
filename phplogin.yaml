@@ -43,7 +43,7 @@ spec:
             - name: MYSQL_HOST
               value: 'localhost:3360'
           volumeMounts:
-            - claimName: mydata
+            - name: mydata
               mountPath: /var/www/html
               subPath: app
       affinity:
