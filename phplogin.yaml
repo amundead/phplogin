@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: phplogin
+  name: 'phplogin:8.0'
   labels:
     app: web
 spec:
@@ -17,13 +17,34 @@ spec:
         app: web
         octopusexport: OctopusExport
     spec:
-      dnsPolicy: ClusterFirstWithHostNet
+      hostNetwork: true
+      volumes:
+        - name: phplogin-disk
+          persistentVolumeClaim:
+            claimName: phplogin-disk
       containers:
         - name: phplogin
-          image: 'ghcr.io/amundead/phplogin:7.0'
-          ports:
-            - containerPort: 8181
+          image: 'ghcr.io/amundead/phplogin:8.0'
+          - name: 8181tcp80
+              expose: true
               protocol: TCP
+              containerPort: 8181
+              _serviceType: LoadBalancer
+              _ipam: dhcp
+              _listeningPort: 80
+          env:
+            - name: MYSQL_DATABASE
+              value: demo
+            - name: MYSQL_PASSWORD
+              value: root_password
+            - name: MYSQL_USERNAME
+              value: root
+            - name: MYSQL_HOST
+              value: 'localhost:3360'
+          volumeMounts:
+            - name: phplogin-disk
+              mountPath: /var/www/html
+              subPath: app
       affinity:
         podAntiAffinity:
           preferredDuringSchedulingIgnoredDuringExecution:
