@@ -25,7 +25,8 @@ spec:
       containers:
         - name: phplogin
           image: 'ghcr.io/amundead/phplogin:8.0'
-          - name: 8181tcp80
+          ports:
+            - name: phploginlb
               expose: true
               protocol: TCP
               containerPort: 8181
