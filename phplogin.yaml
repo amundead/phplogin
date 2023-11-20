@@ -19,9 +19,17 @@ spec:
     spec:
       hostNetwork: true
       volumes:
-        - name: mydata
+        - _type: persistentVolumeClaim
           persistentVolumeClaim:
-            claimName: phplogindisk
+            claimName: mydata
+          name: phplogindisk
+          __newPvc:
+            type: persistentvolumeclaim
+            metadata:
+              namespace: phplogin
+        #- name: mydata
+          #persistentVolumeClaim:
+            #claimName: phplogindisk
       containers:
         - name: phplogin
           image: 'ghcr.io/amundead/phplogin:8.0'
