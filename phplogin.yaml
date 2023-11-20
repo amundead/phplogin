@@ -27,6 +27,7 @@ spec:
             type: persistentvolumeclaim
             metadata:
               namespace: phplogin
+      #volumes:
         #- name: mydata
           #persistentVolumeClaim:
             #claimName: phplogindisk
@@ -51,7 +52,7 @@ spec:
             - name: MYSQL_HOST
               value: 'localhost:3360'
           volumeMounts:
-            - name: mydata
+            - claimName: mydata
               mountPath: /var/www/html
               subPath: app
       affinity:
