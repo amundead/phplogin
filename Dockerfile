@@ -5,10 +5,10 @@ RUN docker-php-ext-install mysqli
 
 # SET ENV
 
-ENV MYSQL_HOST=phplogin-db-1
-ENV MYSQL_USERNAME=root
-ENV MYSQL_PASSWORD=root_password
-ENV MYSQL_DATABASE=demo
+#ENV MYSQL_HOST=phplogin-db-1
+#ENV MYSQL_USERNAME=root
+#ENV MYSQL_PASSWORD=root_password
+#ENV MYSQL_DATABASE=demo
 
 # Copy the PHP application files to the working directory
 WORKDIR /var/www/html/app
