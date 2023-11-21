@@ -27,7 +27,7 @@ spec:
         - name: phplogin
           image: 'ghcr.io/amundead/phplogin:8.0'
           ports:
-            - containerPort: 8181
+            - containerPort: 80
               protocol: TCP
           env:
             - name: MYSQL_DATABASE
