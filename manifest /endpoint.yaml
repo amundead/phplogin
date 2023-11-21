@@ -1,9 +1,9 @@
-apiVersion: v1
-kind: Endpoints
-metadata:
-  name: phplogincluster #<------ Should match the name of Service
-subsets:
-  - addresses:
-      - ip: 10.43.32.145
-    ports:
-      - port: 8181
+#apiVersion: v1
+#kind: Endpoints
+#metadata:
+  #name: phplogincluster #<------ Should match the name of Service
+#subsets:
+  #- addresses:
+      #- ip: 10.43.32.145
+    #ports:
+      #- port: 8181
