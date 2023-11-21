@@ -17,7 +17,7 @@ spec:
         app: web
         octopusexport: OctopusExport
     spec:
-      hostNetwork: true
+      hostNetwork: false
       type: LoadBalancer
       #volumes:
         #- name: phplogin-disk
