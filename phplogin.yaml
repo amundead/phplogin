@@ -26,8 +26,13 @@ spec:
         - name: phplogin
           image: 'ghcr.io/amundead/phplogin:8.0'
           ports:
-            - containerPort: 8181
+            - name: test
+              expose: true
               protocol: TCP
+              containerPort: 8181
+              _serviceType: LoadBalancer
+              _ipam: dhcp
+              _listeningPort: 80
           env:
             - name: MYSQL_DATABASE
               value: demo
