@@ -11,7 +11,7 @@ RUN docker-php-ext-install mysqli
 #ENV MYSQL_DATABASE=demo
 
 # Copy the PHP application files to the working directory
-WORKDIR /var/www/html/app
+WORKDIR /var/www/html/public/app
 COPY default.conf /etc/nginx/conf.d/default.conf
 COPY app ./
 
