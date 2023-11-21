@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: 'phplogin:8.0'
+  name: 'phploginv8.0'
   labels:
     app: web
 spec:
