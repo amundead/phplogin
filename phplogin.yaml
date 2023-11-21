@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: 'phploginv8.0'
+  name: phploginv8.0
   labels:
     app: web
 spec:
@@ -26,7 +26,7 @@ spec:
         - name: phplogin
           image: 'ghcr.io/amundead/phplogin:8.0'
           ports:
-            - containerPort: 80
+            - containerPort: 8181
               protocol: TCP
           env:
             - name: MYSQL_DATABASE
