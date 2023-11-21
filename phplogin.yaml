@@ -56,14 +56,3 @@ spec:
 
 ---
 
-apiVersion: v1
-kind: Service
-metadata:
-  name: phploginlb
-spec:
-  selector:
-    app: phplogin
-  ports:
-    - port: 8181
-      targetPort: 80
-  type: LoadBalancer
