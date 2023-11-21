@@ -28,14 +28,6 @@ spec:
           ports:
             - containerPort: 80
               protocol: TCP
-              _serviceType: LoadBalancer
-              _name: 80tcp
-              _ipam: ''
-              _listeningPort: 8181
-              name: phplogin
-          #ports:
-            #- containerPort: 80
-              #protocol: TCP
           env:
             - name: MYSQL_DATABASE
               value: demo
