@@ -18,6 +18,7 @@ spec:
         octopusexport: OctopusExport
     spec:
       hostNetwork: true
+      type: LoadBalancer
       #volumes:
         #- name: phplogin-disk
           #persistentVolumeClaim:
@@ -26,13 +27,8 @@ spec:
         - name: phplogin
           image: 'ghcr.io/amundead/phplogin:8.0'
           ports:
-            - name: test
-              expose: true
+            - containerPort: 8181
               protocol: TCP
-              containerPort: 8181
-              _serviceType: LoadBalancer
-              _ipam: dhcp
-              _listeningPort: 80
           env:
             - name: MYSQL_DATABASE
               value: demo
