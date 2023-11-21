@@ -11,4 +11,4 @@ spec:
       targetPort: 80
   selector:
       app: phplogin 
-      type: front-end-app
+      #type: front-end-app
