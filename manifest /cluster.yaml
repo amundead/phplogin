@@ -5,8 +5,10 @@ metadata:
 spec:
   type: ClusterIP
   ports:
-    - targetPort: 80
-      port: 8181  
+    - name: phplogin
+      port: 80
+      protocol: TCP
+      targetPort: 80
   selector:
       app: phplogin 
       #type: front-end-app
