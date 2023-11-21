@@ -41,6 +41,8 @@ spec:
             #- name: phplogin-disk
               #mountPath: /var/www/html/app
               #subPath: picture
+              securityContext:
+      runAsNonRoot: false
       affinity:
         podAntiAffinity:
           preferredDuringSchedulingIgnoredDuringExecution:
