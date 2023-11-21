@@ -1,14 +1,14 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: 'phploginv8.0'
+  name: 'phplogin:8.0'
   labels:
     app: web
 spec:
   selector:
     matchLabels:
       octopusexport: OctopusExport
-  replicas: 1
+  replicas: 2
   strategy:
     type: RollingUpdate
   template:
@@ -19,30 +19,15 @@ spec:
     spec:
       hostNetwork: true
       volumes:
-        - _type: persistentVolumeClaim
+        - name: phplogin-disk
           persistentVolumeClaim:
-            claimName: mydata
-          name: diskphplogin
-          __newPvc:
-            type: persistentvolumeclaim
-            metadata:
-              namespace: phplogin
-            spec:
-              storageClassName: ''
-              volumeName: ''
-              resources:
-                requests: {}
+            claimName: phploginpvc
       containers:
         - name: phplogin
           image: 'ghcr.io/amundead/phplogin:8.0'
           ports:
-            - name: phploginlb
-              expose: true
+            - containerPort: 80
               protocol: TCP
-              containerPort: 8181
-              _serviceType: LoadBalancer
-              _ipam: dhcp
-              _listeningPort: 80
           env:
             - name: MYSQL_DATABASE
               value: demo
@@ -53,10 +38,9 @@ spec:
             - name: MYSQL_HOST
               value: 'localhost:3360'
           volumeMounts:
-            - name: diskphplogin
-              mountPath: /var/www
-              subPath: html
-          __active: true
+            - name: phplogin-disk
+              mountPath: /var/www/html
+              subPath: app
       affinity:
         podAntiAffinity:
           preferredDuringSchedulingIgnoredDuringExecution:
