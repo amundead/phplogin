@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: phplogincluster
+spec:
+  type: ClusterIP
+  ports:
+    - targetPort: 80
+      port: 8181  
+  selector:
+      name: phploginv8.0 
+      #type: front-end-app
