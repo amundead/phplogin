@@ -18,10 +18,10 @@ spec:
         octopusexport: OctopusExport
     spec:
       hostNetwork: true
-      volumes:
-        - name: phplogin-disk
-          persistentVolumeClaim:
-            claimName: phploginpvc
+      #volumes:
+        #- name: phplogin-disk
+          #persistentVolumeClaim:
+            #claimName: phploginpvc
       containers:
         - name: phplogin
           image: 'ghcr.io/amundead/phplogin:8.0'
@@ -37,10 +37,10 @@ spec:
               value: root
             - name: MYSQL_HOST
               value: 'localhost:3360'
-          volumeMounts:
-            - name: phplogin-disk
-              mountPath: /var/www/html/app
-              subPath: picture
+          #volumeMounts:
+            #- name: phplogin-disk
+              #mountPath: /var/www/html/app
+              #subPath: picture
       affinity:
         podAntiAffinity:
           preferredDuringSchedulingIgnoredDuringExecution:
