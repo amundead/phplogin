@@ -39,8 +39,8 @@ spec:
               value: 'localhost:3360'
           volumeMounts:
             - name: phplogin-disk
-              mountPath: /var/www/html
-              subPath: app
+              mountPath: /var/www/html/app
+              subPath: picture
       affinity:
         podAntiAffinity:
           preferredDuringSchedulingIgnoredDuringExecution:
