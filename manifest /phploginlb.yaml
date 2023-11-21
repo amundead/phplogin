@@ -6,6 +6,6 @@ spec:
   selector:
     app: phplogin
   ports:
-    - port: 8765
-      targetPort: 9376
+    - port: 8181
+      targetPort: 80
   type: LoadBalancer
