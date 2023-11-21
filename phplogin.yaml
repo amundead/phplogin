@@ -53,3 +53,20 @@ spec:
                       values:
                         - web
                 topologyKey: kubernetes.io/hostname
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: phplogincluster
+spec:
+  type: ClusterIP
+  ports:
+    - name: phplogin
+      port: 80
+      protocol: TCP
+      targetPort: 80
+  selector:
+      app: phplogin 
+      #type: front-end-app
