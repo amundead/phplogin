@@ -17,7 +17,7 @@ spec:
         app: phplogin
         octopusexport: OctopusExport
     spec:
-      hostNetwork: false
+      hostNetwork: true
       #volumes:
         #- name: phplogin-disk
           #persistentVolumeClaim:
