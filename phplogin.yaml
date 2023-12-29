@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: phploginv8.0
+  name: phploginv9.0
   labels:
     app: phplogin
 spec:
@@ -24,7 +24,7 @@ spec:
             #claimName: phploginpvc
       containers:
         - name: phplogin
-          image: 'ghcr.io/amundead/phplogin:8.0'
+          image: 'ghcr.io/amundead/phplogin:9.0'
           #ports:
             #- containerPort: 80
               #protocol: TCP
@@ -36,7 +36,7 @@ spec:
             - name: MYSQL_USERNAME
               value: root
             - name: MYSQL_HOST
-              value: 'localhost:3360'
+              value: '172.26.16.61:3306'
           #volumeMounts:
             #- name: phplogin-disk
               #mountPath: /var/www/html/app
