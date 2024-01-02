@@ -20,4 +20,4 @@ imageScans:
    #name: phplogin
 
   # Specify the scan interval
-  interval: 2m
+  interval: 1m
