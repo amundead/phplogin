@@ -5,5 +5,5 @@
     image: "ghcr.io/amundead/phplogin"
     tagName: phploginscan
     secretRef:
-    name: phplogin
+      name: phplogin
     interval: 1m
