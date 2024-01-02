@@ -10,10 +10,10 @@ imageScans:
       order: asc
 
   # specify images to scan
-  image: "ghcr.io/amundead/phplogin"
+  image: "https://github.com/amundead/phplogin.git"
 
   # Specify the tag name, it has to be unique in the same bundle
-  tagName: phplogin
+  tagName: ghcr.io/amundead/phplogin
 
   # specify secret to pull image if in private registry
   #secretRef:
