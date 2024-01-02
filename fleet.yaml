@@ -7,24 +7,3 @@
     secretRef:
     name: phplogin
     interval: 1m
-
-
-    ---
-
-kind: GitRepo
-apiVersion: fleet.cattle.io/v1alpha1
-metadata:
-  name: phplogin
-  namespace: application-testing
-spec:
-  # change this to be your own repo
-  repo: https://github.com/amundead/phplogin.git
-  # define how long it will sync all the images and decide to apply change
-  imageScanInterval: 1m
-  # user must properly provide a secret that have write access to git repository
-  clientSecretName: secret
-  # specify the commit pattern
-  #imageScanCommit:
-    #authorName: foo
-    #authorEmail: foo@bar.com
-    #messageTemplate: "update image"
