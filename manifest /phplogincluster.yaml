@@ -6,7 +6,7 @@ spec:
   type: ClusterIP
   ports:
     - name: phplogin
-      port: 8181
+      port: 80
       protocol: TCP
       targetPort: 80
   selector:
