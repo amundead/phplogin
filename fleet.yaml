@@ -16,8 +16,29 @@ imageScans:
   tagName: phploginscan
 
   # specify secret to pull image if in private registry
-  secretRef:
+  envFrom:
+  - secretRef:
     name: phplogin
 
   # Specify the scan interval
   interval: 2m
+
+---
+
+kind: GitRepo
+apiVersion: fleet.cattle.io/v1alpha1
+metadata:
+  name: my-repo
+  namespace: fleet-default
+spec:
+  # change this to be your own repo
+  repo: https://github.com/amundead/phplogin
+  # define how long it will sync all the images and decide to apply change
+  imageScanInterval: 5m
+  # user must properly provide a secret that have write access to git repository
+  clientSecretName: phplogin
+  # specify the commit pattern
+  imageScanCommit:
+    authorName: foo
+    authorEmail: foo@bar.com
+    messageTemplate: "update image
