@@ -24,13 +24,13 @@ spec:
             #claimName: phploginpvc
       containers:
         - name: phplogin
-          image: 'ghcr.io/amundead/phplogin:13.0' 
+          image: 'ghcr.io/amundead/phplogin:13.0' # {"$imagescans": "phploginscan"}
           #ports:
             #- containerPort: 80
               #protocol: TCP
-          #envFrom:
-            #- secretRef:
-                #name: phplogin
+          envFrom:
+            - secretRef:
+                name: phplogin
           env:
             - name: MYSQL_DATABASE
               value: demo
