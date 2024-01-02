@@ -17,7 +17,7 @@ imageScans:
 
   # specify secret to pull image if in private registry
   secretRef:
-    name: dockerhub-secret
+    #name: dockerhub-secret
     username: ${{ github.repository_owner }}
     password: ${{ secrets.GITHUB_TOKEN }}
 
