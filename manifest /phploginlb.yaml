@@ -4,7 +4,7 @@ metadata:
 annotations:
   #cloudprovider.harvesterhci.io/ipam: dhcp
   field.cattle.io/publicEndpoints: >-
-    [{"addresses":["172.26.16.63"],"port":8181,"protocol":"TCP","serviceName":"application-testing:phplogin-lb","allNodes":false}]
+    [{"addresses":["172.26.16.63"],"port":8181,"protocol":"TCP"}]
 name: phplogin-lb
 spec:
   selector:
