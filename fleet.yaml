@@ -16,7 +16,7 @@ imageScans:
   tagName: phplogin
 
   # specify secret to pull image if in private registry
-  secretRef:
+  #secretRef:
     #name: dockerhub-secret
     #username: ${{ github.repository_owner }}
     #password: ${{ secrets.GITHUB_TOKEN }}
