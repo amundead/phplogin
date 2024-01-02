@@ -16,9 +16,9 @@ imageScans:
   tagName: phploginscan
 
   # specify secret to pull image if in private registry
-envFrom:
-  - secretRef:
-      name: phplogin
+#envFrom:
+  #- secretRef:
+      #name: phplogin
 
   # Specify the scan interval
   interval: 2m
