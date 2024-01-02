@@ -16,10 +16,10 @@ imageScans:
   tagName: ghcr.io/amundead/phplogin:13.0
 
   # specify secret to pull image if in private registry
-  secretRef:
+  #secretRef:
     #name: dockerhub-secret
-    username: ${{ github.repository_owner }}
-    password: ${{ secrets.GITHUB_TOKEN }}
+    #username: ${{ github.repository_owner }}
+    #password: ${{ secrets.GITHUB_TOKEN }}
 
   # Specify the scan interval
   interval: 1m
