@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: phploginv11.0
+  name: phploginv12.0
   labels:
     app: phplogin
 spec:
@@ -24,7 +24,7 @@ spec:
             #claimName: phploginpvc
       containers:
         - name: phplogin
-          image: 'ghcr.io/amundead/phplogin:11.0'
+          image: 'ghcr.io/amundead/phplogin:12.0'
           #ports:
             #- containerPort: 80
               #protocol: TCP
