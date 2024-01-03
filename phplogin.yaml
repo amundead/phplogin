@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: phploginv14.0
+  name: phplogin-test
   labels:
     app: phplogin
 spec:
