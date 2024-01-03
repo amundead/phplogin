@@ -40,20 +40,7 @@ spec:
           #volumeMounts:
             #- name: phplogin-disk
               #mountPath: /var/www/html/app
-              #subPath: picture
-    imageScans:
-    - policy:
-        semver:
-          range: "*"
-        alphabetical:
-          order: asc
-                # specify images to scan
-      image: "amundead/phplogin"
-
-                # Specify the tag name, it has to be unique in the same bundle
-      tagName: phploginscan
-              # Specify the scan interval
-      interval: 1m          
+              #subPath: picture         
       securityContext:
         runAsNonRoot: false
       affinity:
