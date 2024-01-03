@@ -31,7 +31,7 @@ imageScans:
   image: "ghcr.io/amundead/phplogin"
 
   # Specify the tag name, it has to be unique in the same bundle
-  tagName: phploginscan
+  tagName: policy-1
 
   # specify secret to pull image if in private registry
  #secretRef:
