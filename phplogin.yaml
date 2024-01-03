@@ -24,7 +24,7 @@ spec:
             #claimName: phploginpvc
       containers:
         - name: phplogin
-          image: 'amundead/phplogin:14.0' # {"$imagescans": "phploginscan:tag"}
+          image: 'phplogin:14.0' # {"$imagescans": "phploginscan:tag"}
           #ports:
             #- containerPort: 80
               #protocol: TCP
