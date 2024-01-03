@@ -1,4 +1,4 @@
-name: update new phplogin:14.0
+name: update new phplogin:15.0
 
 on:
   push:
@@ -35,6 +35,6 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            amundead/phplogin:14.0
-            ghcr.io/amundead/phplogin:14.0
+            amundead/phplogin:15.0
+            ghcr.io/amundead/phplogin:15.0
               
