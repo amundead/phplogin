@@ -24,7 +24,7 @@ spec:
             #claimName: phploginpvc
       containers:
         - name: phplogin
-          image: ghcr.io/amundead/phplogin:14.0
+          image: ghcr.io/amundead/phplogin:14.0  # {"$imagescans": "phploginscan"}
           #ports:
             #- containerPort: 80
               #protocol: TCP
