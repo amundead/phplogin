@@ -2,7 +2,7 @@ kind: GitRepo
 apiVersion: fleet.cattle.io/v1alpha1
 metadata:
   name: my-repo
-  namespace: fleet-ldefault
+  namespace: fleet-default
 spec:
   # change this to be your own repo
   repo: https://github.com/amundead/phplogin
