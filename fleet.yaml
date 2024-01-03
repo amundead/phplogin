@@ -10,7 +10,7 @@ imageScans:
       order: asc
 
   # specify images to scan
-  image: "ghcr.io/amundead/phplogin"
+  image: "amundead/phplogin"
 
   # Specify the tag name, it has to be unique in the same bundle
   tagName: phploginscan
