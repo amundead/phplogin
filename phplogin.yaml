@@ -42,18 +42,18 @@ spec:
               #mountPath: /var/www/html/app
               #subPath: picture
     imageScans:
-       - policy:
-           semver:
-            range: "*"
-           alphabetical:
-            order: asc
+    - policy:
+        semver:
+          range: "*"
+        alphabetical:
+          order: asc
                 # specify images to scan
-        image: "amundead/phplogin"
+      image: "amundead/phplogin"
 
                 # Specify the tag name, it has to be unique in the same bundle
-        tagName: phploginscan
+      tagName: phploginscan
               # Specify the scan interval
-        interval: 1m          
+      interval: 1m          
       securityContext:
         runAsNonRoot: false
       affinity:
