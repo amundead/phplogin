@@ -15,7 +15,7 @@ spec:
     authorName: foo
     authorEmail: foo@bar.com
     messageTemplate: "update image"
-
+---
 imageScans:
 # specify the policy to retrieve images, can be semver or alphabetical order
 - policy:
