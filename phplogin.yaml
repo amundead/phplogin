@@ -56,8 +56,6 @@ spec:
                         - web
                 topologyKey: kubernetes.io/hostname
 ---
-
----
 imageScans:
 # specify the policy to retrieve images, can be semver or alphabetical order
 - policy:
