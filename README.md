@@ -1,4 +1,4 @@
 # phplogin
 Simple PHP login system 
-require MYSQL database
-enjoy
+required MYSQL database.
+For testing only my friend
