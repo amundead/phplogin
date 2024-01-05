@@ -101,8 +101,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </head>
 <body>
     <div class="wrapper">
-        <h2>Login :)</h2>
-        <p>Please fill in your credentials to login. Tag 16.0</p>
+        <h2>Login</h2>
+        <p>Please fill in your credentials to login. Test tag 16.0 baru</p>
 
         <?php 
         if(!empty($login_err)){
