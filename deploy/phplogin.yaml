@@ -17,7 +17,7 @@ spec:
         app: phplogin
         octopusexport: OctopusExport
     spec:
-      hostNetwork: true
+      #hostNetwork: true
       #volumes:
         #- name: phplogin-disk
           #persistentVolumeClaim:
@@ -25,6 +25,7 @@ spec:
       containers:
         - name: phplogin
           image: ghcr.io/amundead/phplogin:16.0
+          imagePullPolicy: "Always"
           #ports:
             #- containerPort: 80
               #protocol: TCP
