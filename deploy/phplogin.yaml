@@ -37,7 +37,7 @@ spec:
             - name: MYSQL_USERNAME
               value: root
             - name: MYSQL_HOST
-              value: '172.26.16.61:3306'
+              value: '10.43.91.242:3306'
           #volumeMounts:
             #- name: phplogin-disk
               #mountPath: /var/www/html/app
