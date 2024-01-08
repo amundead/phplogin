@@ -13,5 +13,3 @@ spec:
       name: phplogin
   selector:
     {{- include "phplogin.selectorLabels" . | nindent 4 }}
-
-
