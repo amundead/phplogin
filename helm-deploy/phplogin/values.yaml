@@ -44,8 +44,8 @@ securityContext: {}
   #port: 8383
   
 service:
-  type: ClusterIP
-  port: 80
+   type: ClusterIP
+   port: 80
   
 ingress:
   enabled: false
