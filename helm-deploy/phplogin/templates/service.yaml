@@ -18,12 +18,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "phplogin.fullname" . }}
-  labels:
-    {{- include "phplogin.labels" . | nindent 4 }}
+  name: phplogin-helm-lb
 spec:
   selector:
-    elector:
     {{- include "phplogin.selectorLabels" . | nindent 4 }}
   loadBalancerIP: 172.26.16.63
   ports:
