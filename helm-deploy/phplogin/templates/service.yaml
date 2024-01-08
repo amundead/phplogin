@@ -26,4 +26,5 @@ spec:
   ports:
     - port: 8383
       targetPort: 80
+      name: phplogin-helm-lb
   type: LoadBalancer
