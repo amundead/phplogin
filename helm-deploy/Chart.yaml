@@ -1,0 +1,26 @@
+apiVersion: v2
+name: application
+description: PHP Login System- Testing jerkk
+
+type: application
+
+# Helm chart Version
+
+version: 1.00
+appVersion: 16.0
+
+
+keywords:
+  - java
+  - node
+  - dotnet
+  - kubernetes
+  - stakater
+  - application
+
+home: https://github.com/amundead/phplogin
+maintainers:
+- name: amundead
+  email: amundeadz@yahoo.com
+
+icon: https://github.com/stakater/ForecastleIcons/blob/master/stakater.png
