@@ -39,9 +39,9 @@ securityContext: {}
   # runAsNonRoot: true
   # runAsUser: 1000
 
-service:
-  type: LoadBalancer
-  port: 8383
+#service:
+  #type: LoadBalancer
+  #port: 8383
   
 
 service:
