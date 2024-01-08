@@ -8,8 +8,10 @@ spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: http
+      targetPort: 80
       protocol: TCP
-      name: http
+      name: phplogin
   selector:
     {{- include "phplogin.selectorLabels" . | nindent 4 }}
+
+
