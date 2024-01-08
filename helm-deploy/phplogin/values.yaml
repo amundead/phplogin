@@ -42,7 +42,7 @@ securityContext: {}
 service:
   type: LoadBalancer
   port: 8383
-  loadBalancerIP: 172.26.16.63
+  #loadBalancerIP: 172.26.16.63
 
 #service:
   #type: LoadBalancer
