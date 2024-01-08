@@ -21,7 +21,7 @@ metadata:
   name: phplogin-helm-lb
 spec:
   selector:
-    app: phplogin
+    app: phplogin-helm
   loadBalancerIP: 172.26.16.63
   ports:
     - port: 8383
