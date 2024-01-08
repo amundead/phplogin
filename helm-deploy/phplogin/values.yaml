@@ -82,16 +82,6 @@ autoscaling:
   targetCPUUtilizationPercentage: 80
   # targetMemoryUtilizationPercentage: 80
 
-env:
-  - name: MYSQL_DATABASE
-    value: demo
-  - name: MYSQL_PASSWORD
-    value: root_password
-  - name: MYSQL_USERNAME
-    value: root
-  - name: MYSQL_HOST
-    value: '10.43.91.242:3306'
-
 # Additional volumes on the output Deployment definition.
 volumes: []
 # - name: foo
