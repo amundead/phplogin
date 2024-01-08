@@ -11,5 +11,6 @@ spec:
       targetPort: 80
       protocol: TCP
       name: phplogin
+  loadBalancerIP: 172.26.16.63
   selector:
     {{- include "phplogin.selectorLabels" . | nindent 4 }}
