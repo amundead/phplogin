@@ -14,17 +14,35 @@ spec:
   selector:
     {{- include "phplogin.selectorLabels" . | nindent 4 }}
 
+#---
+#apiVersion: v1
+#kind: Service
+#metadata:
+  #name: phplogin-helm-lb
+#spec:
+  #selector:
+    #app: phplogin-helm
+  #loadBalancerIP: 172.26.16.63
+  #ports:
+    #- port: 8383
+      #targetPort: 80
+      #name: phplogin-helm-lb
+  #type: LoadBalancer
+
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: phplogin-helm-lb
+  name: {{ include "phplogin.fullname" . }}
+  labels:
+    {{- include "phplogin.labels" . | nindent 4 }}
 spec:
-  selector:
-    app: phplogin-helm
-  loadBalancerIP: 172.26.16.63
+  type: LoadBalancer
   ports:
     - port: 8383
       targetPort: 80
+      protocol: TCP
       name: phplogin-helm-lb
-  type: LoadBalancer
+  loadBalancerIP: 172.26.16.63
+  selector:
+    {{- include "phplogin.selectorLabels" . | nindent 4 }}
