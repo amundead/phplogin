@@ -1,4 +1,4 @@
-FROM dwchiang/nginx-php-fpm:8.1.21-fpm-alpine3.18-nginx-1.25.2
+FROM dwchiang/nginx-php-fpm:8.2.13-fpm-alpine3.18-nginx-1.25.4
 	 
 # Install php-fpm and other dependencies
 RUN docker-php-ext-install mysqli
