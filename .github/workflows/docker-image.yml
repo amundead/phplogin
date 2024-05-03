@@ -35,6 +35,6 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            amundead/phplogin:17.0
-            ghcr.io/amundead/phplogin:17.0
+            amundead/phplogin:18.0
+            ghcr.io/amundead/phplogin:18.0
               
