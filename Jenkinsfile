@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         // Docker and GitHub configurations
-        DOCKER_IMAGE = "amundead/phplogin"               // Name of the Docker image
+        DOCKER_IMAGE = "phplogin"               // Name of the Docker image
         DOCKERHUB_USERNAME = "amundead" // Docker Hub username
         DOCKERHUB_REPO = "${DOCKERHUB_USERNAME}/${DOCKER_IMAGE}"
         GITHUB_USERNAME = "amundead"       // GitHub username
