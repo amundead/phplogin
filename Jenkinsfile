@@ -85,8 +85,8 @@ pipeline {
         always {
             // Clean up Docker images from local environment
             sh "docker rmi ${DOCKER_IMAGE}:latest"
-            sh "docker rmi ${DOCKERHUB_REPO}:latest"
-            sh "docker rmi ${GITHUB_REPO_URL}:latest"
+            sh "docker rmi ${DOCKERHUB_REPO}:${IMAGE_TAG}"
+            sh "docker rmi ${GITHUB_REPO_URL}:${IMAGE_TAG}"
         }
         success {
             echo 'Docker image successfully pushed to both Docker Hub and GitHub Packages!'
