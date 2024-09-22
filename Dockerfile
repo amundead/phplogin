@@ -4,7 +4,7 @@ FROM dwchiang/nginx-php-fpm:8.2.23-fpm-alpine3.19-nginx-1.25.5
 RUN docker-php-ext-install mysqli
 RUN apk update
 RUN apk add nano 
-SET ENV
+#SET ENV
 
 #ENV MYSQL_HOST=phplogin-db-1
 ENV MYSQL_USERNAME=root
