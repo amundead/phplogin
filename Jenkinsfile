@@ -11,7 +11,7 @@ pipeline {
         GITHUB_IMAGE = "phplogin"
         GITHUB_REGISTRY = "ghcr.io"
         GITHUB_REPO_URL = "${GITHUB_REGISTRY}/${GITHUB_USERNAME}/${GITHUB_IMAGE}"
-        IMAGE_TAG = "19.0"
+        IMAGE_TAG = "20.0"
         // Credentials for Docker Hub and GitHub Packages (stored in Jenkins)
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-credentials-id')
         GITHUB_TOKEN = credentials('github-credentials-id')
